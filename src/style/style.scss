@@ -1,0 +1,149 @@
+$pos0: 0 0;
+$posMin: -10000px;
+$posMax: 5000px;
+@font-face {
+  font-family: "Permanent Marker";
+  src: local("Permanent Marker"),
+    url(../background/PermanentMarker-Regular.ttf) format("truetype");
+}
+body {
+  margin: 0;
+  font-family: "Permanent Marker", "Oswald", sans-serif;
+}
+#root {
+  width: 100%;
+  overflow: hidden;
+}
+.App {
+  position: relative;
+  z-index: 5;
+}
+.fas {
+  font-size: 4em;
+}
+.min {
+  font-size: 2em;
+}
+#root {
+  text-align: center;
+}
+/* background */
+@keyframes starsGlow {
+  from {
+    background-position: $pos0;
+  }
+  to {
+    background-position: $posMin $posMax;
+  }
+}
+
+.stars,
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000000 url("../background/stars.png") repeat top center;
+  z-index: 0;
+}
+
+.glow {
+  background: transparent url("../background/twinkling.png") repeat top center;
+  z-index: 1;
+  animation: starsGlow 200s linear infinite;
+}
+/* weather.jsx */
+
+.small {
+  padding: 1%;
+  .fas {
+    font-size: 1.2em;
+  }
+  .far {
+    font-size: 1.2em;
+  }
+}
+.border {
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+  padding: 2%;
+}
+.border:hover {
+  opacity: 0.7;
+  cursor: default;
+}
+.container:hover {
+  cursor: default;
+}
+.small:nth-child(4) {
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
+.small:first-child {
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+}
+h6 {
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+h1 {
+  font-family: "Permanent Marker", "Oswald", sans-serif !important;
+  font-size: 2em !important;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 3em;
+}
+h4 {
+  font-size: 1.8em;
+}
+.text {
+  font-size: 0.7em;
+}
+.send {
+  color: white;
+  background: transparent;
+  border-width: 1px 2px 2px 1px !important;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95% !important;
+  transform: rotate(2deg) !important;
+  padding: 2%;
+}
+.fa-sun,
+.fa-poo-storm {
+  background: radial-gradient(
+    circle at center,
+    rgba(209, 201, 45, 0.37) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.fa-cloud-rain,
+.fa-cloud-showers-heavy {
+  background: radial-gradient(
+    circle at center,
+    rgba(84, 116, 129, 0.541) 5%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.fa-wind,
+.fa-smog,
+.fa-cloud {
+  background: radial-gradient(
+    circle at center,
+    rgba(151, 151, 146, 0.37) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
