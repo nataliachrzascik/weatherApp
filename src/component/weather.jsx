@@ -86,12 +86,14 @@ function minmaxTemp(min, max, feels) {
         <div className="row small">
           <div className="col-lg-1  col-sm-3 offset-md-4 offset-sm-2">
             <span className="px-4">
-              <i class="fas fa-arrow-down">{` ${min}`}&deg;</i>
+              <i class="fas fa-arrow-down"></i>
+              {` ${min}`}&deg;
             </span>
           </div>
           <div className="col-lg-1 col-sm-3">
             <span className="px-4">
-              <i class="fas fa-arrow-up">{` ${max}`}&deg;</i>
+              <i class="fas fa-arrow-up"></i>
+              {` ${max}`}&deg;
             </span>
           </div>
           <div className="col-lg-1 col-sm-2">
